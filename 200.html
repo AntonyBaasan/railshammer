@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <base href="/">
+  <title>Rails Hammer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="styles.css">-->
+
+  <link rel="stylesheet" href="dist/lib/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="dist/lib/es6-shim/es6-shim.min.js"></script>
+
+  <script src="dist/lib/zone.js/dist/zone.js"></script>
+  <script src="dist/lib/reflect-metadata/Reflect.js"></script>
+  <script src="dist/lib/systemjs/dist/system.src.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+      
+      $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});
+  </script>
+</head>
+
+<body>
+  <my-app>
+    <div class="loading">LOADING...</div>
+  </my-app>
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="dist/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</html>

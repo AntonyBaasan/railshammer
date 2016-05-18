@@ -1,0 +1,27 @@
+<div *ngIf="currentProject">
+    <div class="panel panel-info">
+        <div class="panel-heading text-center">
+    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#gemDetail" (click)="gemDetailComponent.reset()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Gem
+    </button>
+ </div>
+        <div class="panel-body ">
+    <!-- Modal -->
+    <div class="modal fade" id="gemDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <ed-gem-detail #gemDetailComponent (onSave)="add($event)"></ed-gem-detail>
+        </div>
+    </div>
+
+    <!--show list of gems-->
+
+        <div *ngFor="let gem of currentProject.gems" class="floating-box">
+            <div class="panel panel-info">{{gem}}
+                <button type="button" class="btn btn-danger" (click)="delete(gem)">
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                </button>
+                <!--<modify-buttons [openTargetPanel]="editPanelName" (onEdit)="viewDetailComponent.setView(view)" (onDelete)="deleteView(view)"></modify-buttons>-->
+            </div>
+        </div>
+</div>
+</div>

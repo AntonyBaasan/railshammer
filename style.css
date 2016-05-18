@@ -1,0 +1,18 @@
+.floating-box {
+    display: inline-block;
+    /*width: 150px;
+    height: 75px;*/
+    margin: 2px;
+    border: 1px solid #73AD21;
+    padding: 2px;  
+}
+
+.after-box {
+    border: 3px solid red; 
+}
+
+.centered-image {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+}

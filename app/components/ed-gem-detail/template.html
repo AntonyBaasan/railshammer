@@ -1,0 +1,46 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+    </div>
+
+    <div class="modal-body">
+        <div>
+            <form (submit)="searchGems(textSearch.value)">
+                <input #textSearch placeholder="Insert gem name">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div *ngIf="searching == true">
+            Searching ...
+        </div>
+        <div *ngIf="searching == false">
+            <div *ngIf="foundResults && foundResults.length == 0">No result found</div>
+            <ul *ngIf="foundResults && foundResults.length > 0">
+                <label>Found Result:</label>
+                <li *ngFor="let g of foundResults.slice(0, 10)">
+
+                    <div class="project-row">
+                        {{g.name}},{{g.version}}
+                        <button (click)="select(g)">Add</button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <li *ngFor="let gem of selectedGems">
+                <div>
+                    {{gem.name}},{{gem.version}}                    
+                </div>
+            </li>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="onClickCancel()">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onClickSave()">Save</button>
+    </div>
+</div>

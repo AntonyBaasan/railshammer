@@ -1,0 +1,25 @@
+<div *ngIf="currentProject">
+    <div class="panel panel-success">
+        <div class="panel-heading text-center">
+            <!--<div [hidden]="!currentProject">currentProjecrt: {{currentProject.name}}</div>-->
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#routeDetail" (click)="routeDetailComponent.reset()">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Route
+            </button>
+        </div>
+        <div class="panel-body ">
+            <!--show list of gems-->
+            <!-- Modal -->
+            <div class="modal fade" id="routeDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <ed-route-detail #routeDetailComponent [(currentProject)]="currentProject" (onSave)="add($event)"></ed-route-detail>
+                </div>
+            </div>
+
+            <div *ngFor="let route of currentProject.routes" class="floating-box">
+                <div class="panel panel-default">{{route}}
+                    <modify-buttons [openTargetPanel]="'routeDetail'" (onEdit)="routeDetailComponent.setItem(route)" (onDelete)="delete(route)"></modify-buttons>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

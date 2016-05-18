@@ -1,0 +1,2 @@
+- Details component has too many code duplication. Refactor
+- Controller detail component: Ace editor code and Selectable menu need to be synced

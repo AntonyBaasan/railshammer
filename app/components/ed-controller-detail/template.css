@@ -1,0 +1,12 @@
+.action-list{
+    background-color: #00b3ee;
+    height: 70px;
+}
+
+.block {
+    display: inline;
+}
+
+#code-editor{
+    height: 300px;
+}

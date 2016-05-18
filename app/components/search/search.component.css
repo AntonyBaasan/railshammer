@@ -1,0 +1,28 @@
+.project-row {
+    margin: 5px;
+    /*background-color: yellow;*/
+    border-bottom: 1px solid;
+    height: 60px;
+}
+
+.no-result{
+    font-size: 16px;
+    text-align: center;
+}
+
+.search-panel{
+    padding-top: 30px;
+}
+
+.result-panel{
+    text-align: left;
+    background: red;
+}
+
+.open-editor-button{
+    margin-top: 10px;
+}
+
+.project-name{
+    font-size: 20px;
+}

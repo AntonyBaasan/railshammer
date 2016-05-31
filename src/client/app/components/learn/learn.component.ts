@@ -4,12 +4,12 @@
 import {Component} from '@angular/core';
 
 @Component({
-    selector: 'about-page',
+    selector: 'learn-page',
     providers: [],
     viewProviders: [],
-    templateUrl: '/about.component.html',
-    styleUrls: ['/about.component.css'],
+    templateUrl: '/learn.component.html',
+    styleUrls: ['/learn.component.css'],
     directives: [],
     pipes: []
 })
-export class AboutComponent {}
+export class LearnComponent {}

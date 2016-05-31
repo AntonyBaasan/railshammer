@@ -18,6 +18,7 @@ export class ProjectConfig extends SeedConfig {
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       // {src: 'lodash/lodash.min.js', inject: 'libs'},
 
+      // {src: 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js', inject: true},
       {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       {src: 'bootstrap/dist/js/bootstrap.min.js', inject: 'libs'},
       {src: 'bootstrap/dist/css/bootstrap.min.css', inject: true},

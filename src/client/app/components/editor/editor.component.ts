@@ -12,7 +12,7 @@ import {EdModelListComponent} from '../ed-model-list/index';
 import {EdRouteListComponent} from '../ed-route-list/index';
 import {EdViewListComponent} from '../ed-view-list/index';
 
-import {Project} from '../../models/project';
+import {Project} from '../../models/project2';
 import {ProjectService} from '../../services/project.service';
 
 @Component({

@@ -1,6 +1,6 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Route} from '../../models/route';
-import {Project} from '../../models/project';
+import {Project} from '../../models/project2';
 
 declare var ace:any;
 

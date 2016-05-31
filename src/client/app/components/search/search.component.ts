@@ -4,7 +4,7 @@
 
 import {Component} from '@angular/core';
 import {ProjectService} from './../../services/project.service';
-import {Project} from './../../models/project';
+import {Project} from './../../models/project2';
 import {Router} from '@angular/router';
 
 @Component({

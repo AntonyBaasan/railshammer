@@ -1,56 +1,57 @@
-.container{
-    padding: 0px;
+.container {
+  padding: 0px;
 }
 
-.content{
-    padding-top: 50px;
+.content {
+  padding-top: 50px;
 }
 
 .navbar-inverse {
-    background-color: crimson;
-    border-color: darkgray;
+  background-color: crimson;
+  border-color: darkgray;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
-    color: #ffffff;
-    background-color: darkred;
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: darkred;
 }
-
-
-
-
-
-
-
 
 .navbar-toggle {
   border: none;
   background: transparent !important;
 }
+
 .navbar-toggle:hover {
   background: transparent !important;
 }
+
 .navbar-toggle .icon-bar {
   width: 22px;
   transition: all 0.2s;
 }
+
 .navbar-toggle .top-bar {
   transform: rotate(45deg);
   transform-origin: 10% 10%;
 }
+
 .navbar-toggle .middle-bar {
   opacity: 0;
 }
+
 .navbar-toggle .bottom-bar {
   transform: rotate(-45deg);
   transform-origin: 10% 90%;
 }
+
 .navbar-toggle.collapsed .top-bar {
   transform: rotate(0);
 }
+
 .navbar-toggle.collapsed .middle-bar {
   opacity: 1;
 }
+
 .navbar-toggle.collapsed .bottom-bar {
   transform: rotate(0);
 }

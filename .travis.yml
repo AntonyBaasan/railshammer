@@ -54,3 +54,12 @@ cache:
 
 script:
   - npm run tests.all
+
+
+# Deployment to Surge.sh
+deploy:
+  provider: surge
+  project: ./dist/prod
+  domain: railshammer.surge.sh
+#  on: ProdBranch #default is master branch
+  skip_cleanup: true #will not clean after testing(want to take test build res)

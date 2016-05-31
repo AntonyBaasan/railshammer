@@ -55,7 +55,7 @@ script:
   - npm test
 
 after_success:
-  - npm build.prod
+  - npm run build.prod
 
 # Deployment to Surge.sh
 deploy:

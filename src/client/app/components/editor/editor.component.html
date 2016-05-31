@@ -1,0 +1,89 @@
+<div id="mySidenav" class="sidenav">
+    <div class="sidenav-content">
+        <div *ngIf="!project_not_found && !isLoading">
+            <form (ngSubmit)="onSubmit()" #projectForm="ngForm">
+                <div class="sidenav-buttons">
+                    <button *ngIf="!didProjectSaved" type="submit" class="btn btn-success sidenav-button">
+                        <span class="glyphicon glyphicon-plus-sign"></span>
+                        Save As News
+                    </button>
+                    <button *ngIf="didProjectSaved" type="submit" class="btn btn-success sidenav-button">
+                        <span class="glyphicon glyphicon glyphicon-edit"></span>
+                        Update
+                    </button>
+                    <br/>
+                    <button type="button" class="btn btn-default sidenav-button" onClick="alert('This functionality have not implemented yet!');">
+                        <span class="glyphicon glyphicon glyphicon-wrench"></span>
+                        Generate Template                        
+                    </button>
+                </div>
+                <br/>
+                <br/>
+                <div class="form-group">
+                    <label>Project Name: </label>
+                    <input required class="form-control" [(ngModel)]="project.name" ngControl="name" #name="ngForm" />
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                        Name is required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Project Description: </label>
+                    <textarea required class="form-control" rows="4" [(ngModel)]="project.description" ngControl="description" #description="ngForm"></textarea>
+                    <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                        Description is required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Project Author: </label>
+                    <input required class="form-control" [(ngModel)]="project.author" ngControl="author" #author="ngForm" />
+                    <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                        Author is required
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div class="sidenav-right">
+        <div style="font-size:30px;cursor:pointer" (click)="toggleSide()">
+            <span class="glyphicon glyphicon-menu-hamburger" style="color:white" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div *ngIf="isLoading">Loading...</div>
+
+        <div *ngIf="!isLoading">
+            <div *ngIf="project_not_found">
+                Project not found. <button (click)="backClicked()">Go Back</button>
+            </div>
+            <div *ngIf="!project_not_found">
+                <!--<div>Editor Component {{selectedProjectId}}</div>-->
+                <div *ngIf="project">
+                    <!--Project: {{project.toString()}}-->
+
+                    <div class="row">
+                        <span class="col-sm-8 col-sm-offset-2">
+                            <ed-route-list [(currentProject)]="project"></ed-route-list>
+                        </span>
+                        <span class="col-sm-4">
+                            <ed-controller-list [(currentProject)]="project"></ed-controller-list>
+                        </span>
+                        <span class="col-sm-4">
+                            <ed-view-list [(currentProject)]="project"></ed-view-list>
+                        </span>
+                        <span class="col-sm-4">
+                            <ed-model-list [(currentProject)]="project"></ed-model-list>
+                        </span>
+                        <span class="col-sm-8 col-sm-offset-2">
+                            <ed-gem-list [(currentProject)]="project"></ed-gem-list>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

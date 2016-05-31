@@ -25,6 +25,7 @@ export class ProjectConfig extends SeedConfig {
       {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       {src: 'bootstrap/dist/js/bootstrap.min.js', inject: 'libs'},
       {src: 'bootstrap/dist/css/bootstrap.min.css', inject: true},
+      {src: 'hover.css/css/hover-min.css', inject: true},
     ];
 
     const seedDependencies = this.NPM_DEPENDENCIES;

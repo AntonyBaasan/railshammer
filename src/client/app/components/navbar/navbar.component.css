@@ -11,10 +11,15 @@
   border-color: darkgray;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
+/*.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {*/
+  /*color: #ffffff;*/
+  /*background-color: darkred;*/
+/*}*/
+
+.hvr-bounce-to-top:before  {
   background-color: darkred;
 }
+
 
 .navbar-toggle {
   border: none;

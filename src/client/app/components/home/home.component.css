@@ -37,6 +37,7 @@
   width: 200px;
   height: 60px;
   font-size: 18px;
+  margin:5px;
 }
 
 .instruction-panel {
@@ -68,4 +69,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.05);
 }

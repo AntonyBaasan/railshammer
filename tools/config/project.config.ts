@@ -12,10 +12,8 @@ export class ProjectConfig extends SeedConfig {
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
 
   FONTS_DEST = `${this.APP_DEST}/fonts`;
-  FONTS_SRC = [
-    'node_modules/bootstrap/dist/fonts/**'
-  ];
-  
+  FONTS_SRC = ['node_modules/bootstrap/dist/fonts/**'];
+
   constructor() {
     super();
     // this.APP_TITLE = 'Put name of your app here';

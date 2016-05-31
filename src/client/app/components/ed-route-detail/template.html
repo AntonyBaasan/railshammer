@@ -1,0 +1,33 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+    </div>
+    <div class="modal-body">
+        <div *ngIf="currentItem">
+            <div>
+                <label>Path: </label>
+                <input [(ngModel)]="currentItem.path" placeholder="name of the controller" />
+            </div>
+            <div>
+                <label>Controller: </label>
+                <select [(ngModel)]="currentItem.controller">
+                    <option *ngFor="let p of currentProject.controllers" [value]="p">{{p}}</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Action: </label>
+                <input [(ngModel)]="currentItem.action" placeholder="name of the controller" />
+            </div>
+            <div>
+                <label>Is Root: </label>
+                <input [(ngModel)]="currentItem.isRoot" type="checkbox"/>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="onClickCancel()">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onClickSave()">Save changes</button>
+    </div>
+</div>

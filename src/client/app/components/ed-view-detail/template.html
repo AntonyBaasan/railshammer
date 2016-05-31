@@ -1,0 +1,31 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+    </div>
+    <div class="modal-body">
+        <div *ngIf="currentView">
+            <div>
+                <label>Name: </label>
+                <input [(ngModel)]="currentView.path" placeholder="name of the view"/>
+            </div>
+            <div>
+                <label>Gist: </label>
+                <input [(ngModel)]="currentView.gist" placeholder="gist id"/>
+                <button (click)="updateGist()">Download Code</button>
+            </div>
+            <div>
+                <label>Code: </label>
+
+                <div id="code-editor">
+                    {{currentView.code}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="onClickCancel()">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onClickSave()">Save changes</button>
+    </div>
+</div>

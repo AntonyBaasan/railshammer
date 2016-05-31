@@ -1,0 +1,45 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+    </div>
+    <div class="modal-body">
+        <div *ngIf="currentController">
+            <div>
+                <label>Name: </label>
+                <input [(ngModel)]="currentController.name" placeholder="name of the controller"/>
+            </div>
+            <div>
+                <label>Gist: </label>
+                <input [(ngModel)]="currentController.gist" placeholder="gist id"/>
+                <button (click)="updateGist()">Download Code</button>
+            </div>
+            <div>
+                <label>Code: </label>
+
+                <div id="code-editor">
+                    {{currentController.code}}
+                </div>
+            </div>
+            <div>
+                <label>Actions: </label>
+                <input #newAction placeholder="new action"/>
+                <button (click)="addAction(newAction.value)">Add action</button>
+
+                <div class="action-list">
+                    <div *ngFor="let action of currentController.actions" class="block">
+                        <div class="block">{{action}}
+                            <button (click)="removeAction(action)">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="onClickCancel()">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onClickSave()">Save changes</button>
+    </div>
+</div>

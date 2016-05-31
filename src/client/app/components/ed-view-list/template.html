@@ -1,0 +1,29 @@
+<div *ngIf="currentProject">
+
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">
+
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#viewDetail" (click)="viewDetailComponent.resetView()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add View
+    </button>
+        </div>
+        <div class="panel-body ">
+
+            <!-- Modal -->
+            <div class="modal fade" id="viewDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <ed-view-detail #viewDetailComponent (onSave)="addView($event)"></ed-view-detail>
+                </div>
+            </div>
+
+            <!--show list of views-->
+
+            <div *ngFor="let view of currentProject.views" class="floating-box">
+                <div class="panel panel-default">{{view}}
+                    <modify-buttons [openTargetPanel]="'viewDetail'" (onEdit)="viewDetailComponent.setView(view)" (onDelete)="deleteView(view)"></modify-buttons>
+                </div>
+            </div>
+        </div>
+
+
+    </div>

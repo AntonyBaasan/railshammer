@@ -1,0 +1,42 @@
+<div class="search-panel">
+    <form (submit)="searchProjects(textProjectSearch.value)">
+        <div class="row">
+            <!-- /.col-lg-6 -->
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="input-group">
+                    <input #textProjectSearch type="text" class="form-control" placeholder="Search projects...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search</button>
+                    </span>
+                </div>
+                <!-- /input-group -->
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+        <!-- /.row -->
+    </form>
+    <br/>
+
+    <div *ngIf="isLoading" class="no-result">Loading ...</div>
+    <div *ngIf="searchResults && searchResults.length == 0" class="no-result">No result found. Search again</div>
+    <div class="result-panel" *ngIf="searchResults" class="col-sm-8 col-sm-offset-2">
+        <div class="project-row row" *ngFor="let project of searchResults">
+            <span class="col-xs-10">
+                <div class="project-name">{{project.name}} (author: {{project.author}})</div>
+                <div>{{project.description}}</div>
+            </span>
+            <span class="col-xs-1">
+                <button class="btn btn-danger btn-sm open-editor-button" (click)="openProjectInEditor(project.id)">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    Open
+                    </button>
+            </span>
+            <span class="col-xs-1">
+                <button class="btn btn-danger btn-sm open-editor-button" (click)="openProjectInEditor(project.id)">
+                        <span class="glyphicon glyphicon-pushpin"></span>
+                    Fork
+                    </button>
+            </span>
+        </div>
+    </div>
+</div>

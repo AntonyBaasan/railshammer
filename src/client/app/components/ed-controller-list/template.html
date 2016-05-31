@@ -1,0 +1,27 @@
+<div *ngIf="currentProject">
+    <div class="panel panel-warning">
+        <div class="panel-heading text-center">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#controllerDetail" (click)="detailComponent.resetController()">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Controller
+    </button>
+        </div>
+        <div class="panel-body ">
+
+            <!-- Modal -->
+            <div class="modal fade" id="controllerDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <ed-controller-detail #detailComponent (onSave)="addController($event)"></ed-controller-detail>
+                </div>
+            </div>
+
+            <!--show list of controllers-->
+
+            <div *ngFor="let controller of currentProject.controllers" class="floating-box">
+                <div class="panel panel-warning">{{controller}}
+                    <modify-buttons [openTargetPanel]="'controllerDetail'" (onEdit)="detailComponent.setController(controller)" (onDelete)="deleteController(controller)"></modify-buttons>
+                </div>
+            </div>
+
+        </div>
+
+    </div>

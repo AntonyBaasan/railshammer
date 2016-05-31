@@ -2,15 +2,15 @@
  * Created by Antony on 2016-05-13.
  */
 import {Injectable} from '@angular/core';
-import {Http, URLSearchParams, Headers, RequestOptions} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 
-import {Project} from "./../models/Project";
+import {Project} from './../models/Project';
 
 @Injectable()
 export class ProjectService {
 
-    urlString: string = "https://ratcage-api.herokuapp.com/";
+    urlString: string = 'https://ratcage-api.herokuapp.com/';
 
     constructor(private http: Http) {
     }

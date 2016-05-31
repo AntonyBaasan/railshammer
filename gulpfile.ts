@@ -17,6 +17,7 @@ gulp.task('build.dev', (done: any) =>
 //              'css-lint',
               'build.assets.dev',
               'build.html_css',
+              'build.fonts',    // copy fonts
               'build.js.dev',
               'build.index.dev',
               done));
@@ -47,6 +48,7 @@ gulp.task('build.prod', (done: any) =>
               'build.assets.prod',
               'build.html_css',
               'copy.js.prod',
+              'build.fonts',    // copy fonts
               'build.js.prod',
               'build.bundles',
               'build.bundles.app',
@@ -60,6 +62,7 @@ gulp.task('build.test', (done: any) =>
   runSequence('clean.dev',
               'tslint',
               'build.assets.dev',
+              'build.fonts',
               'build.js.test',
               'build.index.dev',
               done));

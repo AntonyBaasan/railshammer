@@ -16,5 +16,5 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
   pipes: []
 })
 export class NavBarComponent {
-  project_name = "Rails Hammer"
+  project_name = 'Rails Hammer';
 }

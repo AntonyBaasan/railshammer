@@ -15,7 +15,7 @@
     "no-construct": true,
     "no-duplicate-key": true,
     "no-duplicate-variable": true,
-    "no-empty": true,
+    "no-empty": false,
     "no-eval": true,
     "no-trailing-whitespace": true,
     "no-unused-expression": true,
@@ -25,7 +25,6 @@
     "one-line": [true,
       "check-open-brace",
       "check-catch",
-      "check-else",
       "check-whitespace"
     ],
     "quotemark": [true, "single"],

@@ -10,5 +10,4 @@ export class Model {
         this.version = json.version;
         return this;
     }
-
 }

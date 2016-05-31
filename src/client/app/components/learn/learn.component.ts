@@ -7,8 +7,8 @@ import {Component} from '@angular/core';
     selector: 'learn-page',
     providers: [],
     viewProviders: [],
-    templateUrl: '/learn.component.html',
-    styleUrls: ['/learn.component.css'],
+    templateUrl: 'learn.component.html',
+    styleUrls: ['learn.component.css'],
     directives: [],
     pipes: []
 })

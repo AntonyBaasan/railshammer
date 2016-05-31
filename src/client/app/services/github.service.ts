@@ -10,7 +10,7 @@ export class GithubService {
     constructor(private http: Http) {}
 
     getGistById(id: string) {
-        let url = `https://api.github.com/gists/${ id }`;
+        // let url = `https://api.github.com/gists/${ id }`;
 
         return this.http.get(id)
             .map((res:Response) => res.text() );

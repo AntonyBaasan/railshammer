@@ -16,21 +16,20 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent {
 
-
-  description = "Visual rails application editor"
+  description = 'Visual rails application editor';
 
   constructor(private router:Router) {
   }
 
   onCreateButton() {
-    this.router.navigate(['/editor'])
+    this.router.navigate(['/editor']);
   }
 
   onBrowseButton() {
-    this.router.navigate(['/search'])
+    this.router.navigate(['/search']);
   }
 
   onDocsButton() {
-    this.router.navigate(['/docs'])
+    this.router.navigate(['/docs']);
   }
 }

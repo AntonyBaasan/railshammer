@@ -14,9 +14,9 @@ import {EditorComponent} from './components/editor/index';
 import {SearchComponent} from './components/search/index';
 import {LearnComponent} from './components/learn/index';
 
-import {ProjectService} from "./services/project.service";
-import {GithubService} from "./services/github.service";
-import {RubyGemsService} from "./services/rubygems.service";
+import {ProjectService} from './services/project.service';
+import {GithubService} from './services/github.service';
+import {RubyGemsService} from './services/rubygems.service';
 
 @Component({
   selector: 'sd-app',

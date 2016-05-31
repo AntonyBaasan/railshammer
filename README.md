@@ -1,6 +1,6 @@
 # Introduction
 
-[![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
+
 [![Build Status](https://api.travis-ci.org/AntonyBaasan/railshammer.svg?branch=master)](https://travis-ci.org/AntonyBaasan/railshammer)
 
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
@@ -12,6 +12,8 @@ Rails Application Template ([read more](http://guides.rubyonrails.org/rails_appl
 Back-end solutions provided by [Ratcage-API](https://github.com/AntonyBaasan/ratcage-api)
 
 Seed of the application - [`angular2-seed`](https://github.com/mgechev/angular2-seed)
+
+## [[Demo](http://railshammer.surge.sh)](http://railshammer.surge.sh)
 
 # How to start
 

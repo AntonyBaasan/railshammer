@@ -5,7 +5,7 @@ import {Injectable} from '@angular/core';
 import {Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 
-import {Project} from './../models/Project';
+import {Project} from './../models/project2';
 
 @Injectable()
 export class ProjectService {

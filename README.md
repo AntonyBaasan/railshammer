@@ -1,7 +1,8 @@
 # Introduction
 
 [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
-[![Build Status](https://travis-ci.org/antonybaasan/railshammer.svg?branch=master)](https://travis-ci.org/antonybaasan/railshammer)
+[![Build Status](https://api.travis-ci.org/AntonyBaasan/railshammer.svg?branch=master)](https://travis-ci.org/AntonyBaasan/railshammer)
+
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://david-dm.org/antonybaasan/railshammer.svg)](https://david-dm.org/antonybaasan/railshammer)
 [![devDependency Status](https://david-dm.org/antonybaasan/railshammer/dev-status.svg)](https://david-dm.org/antonybaasan/railshammer#info=devDependencies)
